@@ -21,13 +21,14 @@ jobs:
       uses: actions/checkout@v3
     - name: Setup GitHub Pages
       id: pages
-      uses: actions/configure-pages@v1
+      uses: actions/configure-pages@v3
     - name: Install Node.js
       uses: actions/setup-node@v3
       with:
         node-version: 16.x
     - name: Install dependencies and build site
       run: npm i -g pnpm@v6 && pnpm up && pnpm i --shamefully-hoist --force && NODE_ENV=production webpack --bail
+    - run: npm run setup-opal
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
       with:
@@ -42,4 +43,4 @@ jobs:
     steps:
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v1
+      uses: actions/deploy-pages@v3
