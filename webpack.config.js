@@ -298,6 +298,10 @@ module.exports = [
                             from: 'src/lib/libraries/*.json',
                             to: 'libraries',
                             flatten: true
+                        },
+                        {
+                            from: 'static/javascripts/setup-opal.js',
+                            to: 'static/javascripts/setup-opal.js'
                         }
                     ]
                 })
