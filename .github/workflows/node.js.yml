@@ -34,7 +34,7 @@ jobs:
       with:
         path: ./build/
     - name: Upload build artifact manually (optional safeguard)
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v3
       with:
         name: github-pages
         path: ./build/
