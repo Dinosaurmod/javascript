@@ -33,6 +33,11 @@ jobs:
       uses: actions/upload-pages-artifact@v1
       with:
         path: ./build/
+    - name: Upload build artifact manually (optional safeguard)
+      uses: actions/upload-artifact@v4
+      with:
+        name: github-pages
+        path: ./build/
 
   deploy:
     environment:
