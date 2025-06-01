@@ -152,7 +152,7 @@
     "setupFiles": [
       "raf/polyfill",
       "<rootDir>/test/helpers/enzyme-setup.js",
-      "<rootDir>/static/javascripts/setup-opal.js"
+      "<rootDir>/javascripts/setup-opal.js"
     ],
     "testPathIgnorePatterns": [
       "src/test.js"
