@@ -305,7 +305,7 @@ const mapDispatchToProps = dispatch => ({
     onProjectUnchanged: () => dispatch(setProjectUnchanged())
 });
 
-export default RubyToBlocksConverterHOC(injectIntlconnect(
+export default RubyToBlocksConverterHOC(injectIntl(connect(
     mapStateToProps,
     mapDispatchToProps
-)(SB3Downloader));
+)(SB3Downloader)));
